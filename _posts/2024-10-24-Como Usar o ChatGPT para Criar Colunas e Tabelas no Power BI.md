@@ -246,7 +246,7 @@ Existe três grandes limitações utilizando a API do ChatGpt para síntese de n
 
 ◼**Consistência📈:** Cada vez que o modelo é atualizado, as respostas do ChatGPT são solicitadas novamente, e o resultado pode variar de uma execução para outra.
 
-◼**Custo💲:** O custo da API do ChatGPT varia dependendo do modelo utilizado e da quantidade de tokens processados (tokens são as unidades de texto que o modelo utiliza para processar e gerar texto) e pode se tornar elevado dependendo da quantidade de requisições feitas. Para conhecimento os testes que executei no desenvolvimento desse guia consumiu **$0.02 USD** dos **$5.00 USD** adicionados como “crédito” na plataforma.
+◼**Custo💲:** O custo da API do ChatGPT varia dependendo do modelo utilizado e da quantidade de tokens processados (tokens são as unidades de texto que o modelo utiliza para processar e gerar texto) e pode se tornar elevado dependendo da quantidade de requisições feitas. Para conhecimento os testes que executei no desenvolvimento desse guia consumiu **_$0.02 USD_** dos **_$5.00 USD_** adicionados como “crédito” na plataforma.
 
 ![Imagem 18](/assets/images/24-10-2024/18.webp)
 
