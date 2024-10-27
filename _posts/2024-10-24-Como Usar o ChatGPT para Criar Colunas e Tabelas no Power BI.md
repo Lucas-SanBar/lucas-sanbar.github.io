@@ -1,20 +1,22 @@
 ---
-title: "Desbravando o Power BI: Como Usar o ChatGPT para Criar Colunas e Tabelas no Power BI"
+title: "Desbravando o Power BI: Usando o ChatGPT para Criar Colunas e Tabelas no Power BI"
 description: Neste guia, mostrarei como enviar prompts do ChatGPT dentro de scripts do Power Query e salvar os resultados diretamente como novas colunas ou tabelas em seus dados.
 date: 2024-10-24
 categories: [Power BI, ChatGPT]
 tags: [power bi, chatgpt, development, table synthesis, column synthesis]     # TAG names should always be lowercase
+image: 
+  path: /assets/images/24-10-2024/Capa-24-04-2024.webp
 ---
 
 O ChatGPT tem muitos usos para melhorar a produtividade e a eficiência de um profissional de dados. Com casos de uso que variam desde assistência no desenvolvimento, como recomendações de código, solução de problemas e formatação, até casos mais simples, como redação de documentação, elaboração de planos de projeto e criação de programas de aprendizado.
 
 Hoje, vou apresentar um guia prático sobre como enviar prompts do ChatGPT dentro de scripts do Power Query e salvar os resultados diretamente como novas colunas ou tabelas em seus dados. Essa integração oferece uma maneira de enriquecer suas análises, permitindo que você aproveite um pouco mais a inteligência artificial.
 
-![Create table](/assets/images/24-10-2024/1.gif)
-_Gere uma lista de produtos com 100 linhas no formato CSV com as colunas: nome do produto, categoria do produto, data cadastro, preço unitário, marca e quantidade estoque._
+<iframe src="https://capture.dropbox.com/embed/JHusE0SOwu8hrG8B?source=copy-embed" width="728" height="410" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Neste guia, mostrarei uma possível forma de se utilizar a API da OpenAI para criar novas colunas e tabelas no Power BI. Apresentando os princípios básicos da integração, exemplos práticos e uma discussão sobre suas limitações.  
 
+---
 ## Obtendo uma chave de segurança da API
 O primeiro passo do processo é obter uma chave de segurança da API da OpenAI, esta serve para autenticar e autorizar seu acesso aos seus serviços, incluindo o ChatGPT, e nos permitindo acessar o mecanismo de forma programática.
 
@@ -51,6 +53,7 @@ Se você perder essa chave, precisará gerar uma nova.
 
 Depois de obter sua chave, você pode então começar a integrar a API da OpenAI em suas aplicações, incluindo seu uso dentro do Power Query.
 
+---
 ## Conectando o ChatGPT ao Power Query
 
 Estamos prontos para continuar com a segunda parte do processo.
@@ -122,6 +125,7 @@ Se tudo ocorrer como o planejado a função invocada deve retornar um resultado 
 
 >A capital do brasil é Brasilia. Foi Inaugurada em 221 de abril de 1960 e é conhecida por sua arquitetura modernista e planejamento urbano.
 
+---
 ## Criando novas colunas baseando se em um prompt
 
 Usar o ChatGPT para criar novas colunas no modelo de dados do Power BI pode ser uma abordagem poderosa para enriquecer suas análises de dados, automatizar processos repetitivos e popular tabelas de dimensões. Ao integrar a API do ChatGPT no Power Query, é possível gerar colunas personalizadas que atendem a requisitos específicos do negócio.
@@ -140,6 +144,7 @@ Obtendo então o seguinte retorno:
 
 ![Imagem 14](/assets/images/24-10-2024/14.webp)
 
+---
 ## Criando novas colunas com base em colunas já existentes no modelo
 
 Outra forma de utilizarmos a função criada é a de adicionarmos informações de colunas já existentes na tabela ao prompt para se criar uma nova. Desta forma, podemos ter colunas mais especificas e mais relacionadas a tabela na qual a nova coluna vai ser criada. Por exemplo:
@@ -174,6 +179,7 @@ Exemplo de retorno para o produto da linha 3 — Playstation 5:
 
 > 🌟 Aproveite a oportunidade exclusiva! 🌟 A PlayStation 5 está com **últimos 10% em estoque** e em **promoção imperdível** por apenas **R$ 3.499**! Garanta já o seu console da **Sony** e mergulhe em uma nova dimensão de jogos. Não perca essa chance de elevar a sua experiência gamer! 🕹️✨
 
+---
 ## Criando tabelas inteiras com base em um prompt
 
 Uma última forma de utilizarmos a API da OpenAI é a de gerar tabelas inteiras com base em uma requisição, podendo gerar então bases inteiras para testes ou melhorar as já existentes dentro do modelo. Para isso devemos alterar a função criada para a seguinte forma:
@@ -229,6 +235,10 @@ Obtemos a tabela:
 
 ![Imagem 17](/assets/images/24-10-2024/17.webp)
 
+![Create table](/assets/images/24-10-2024/1.gif)
+_Gere uma lista de produtos com 100 linhas no formato CSV com as colunas: nome do produto, categoria do produto, data cadastro, preço unitário, marca e quantidade estoque._
+
+---
 ## Limitações
 Existe três grandes limitações utilizando a API do ChatGpt para síntese de novas tabelas e colunas em um modelo de dado no Power BI. Sendo elas:
 
@@ -242,6 +252,7 @@ Existe três grandes limitações utilizando a API do ChatGpt para síntese de n
 
 ![Imagem 19](/assets/images/24-10-2024/19.webp)
 
+---
 ## Conclusão
 
 É isso! Espero que este guia tenha sido útil. Se você tiver alguma dúvida ou precisar de mais esclarecimentos, sinta-se à vontade para entrar em contato comigo no [🔗LinkedIn](https://www.linkedin.com/in/lucas-barbosa-517259169). Ficarei feliz em ajudar ou aprimorar qualquer parte do guia para uma melhor compreensão e contribuir com a comunidade.

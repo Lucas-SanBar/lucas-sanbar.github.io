@@ -15,6 +15,7 @@ Neste guia, mostrarei como começar do zero no desenvolvimento de custom visuals
 ![Lollipop Chart](/assets/images/18-10-2024/lollipop-chart-1.gif)
 _Lollipop chart criado utilizando a biblioteca D3_
 
+---
 ## Ferramentas necessárias
 1 **(Node.js) :** O primeiro passo para começar o desenvolvimento de custom visuals é a instalação do Node.js, permitindo que você execute scripts Java Script fora do navegador, o que é fundamental para o processo de criação dos seus visuais personalizados. Para instalá-lo, basta acessar o 🔗site oficial do Node.js, baixar a versão recomendada para o seu sistema operacional e seguir as instruções de instalação.
 
@@ -40,6 +41,7 @@ Se tudo ocorrer como planejado e nenhum problema na instalação ocorrer, basta 
 
 ![imagem 6](/assets/images/18-10-2024/6.webp)
 
+---
 ## Configurando o ambiente de desenvolvimento
 Se as três etapas anteriores foram seguidas corretamente, estamos prontos para finalmente configurar o ambiente de desenvolvimento.
 
@@ -95,12 +97,14 @@ A estrutura de arquivos e pastas criada segue o seguinte modelo:
 
 Para um entendimento mais detalhado da estrutura do projeto acesse a [🔗pagina oficial](https://learn.microsoft.com/en-us/power-bi/developer/visuals/visual-project-structure) no Microsoft Learn.
 
+---
 ## Criando o primeiro custom visual
 
 Com todas as ferramentas instaladas e o ambiente de desenvolvimento devidamente configurado, chegou a hora de colocar a mão na massa e começar a criar seus custom visuals no Power BI. Você já tem a estrutura do projeto pronta e todas as dependências instaladas.
 
 Agora que tudo está pronto, vamos começar criando um visual simples como exemplo para entender o fluxo básico de desenvolvimento de um custom visual no Power BI.
 
+---
 ### Modificar o arquivo Visual.ts
 
 1.No VS Code, no painel do Explorer, expanda a pasta src e selecione o arquivo visual.ts.
@@ -261,6 +265,7 @@ public update(options: VisualUpdateOptions) {
     }
 ```
 
+---
 ### Modificar o arquivo Capabilities.json
 1.No VS Code, no painel do Explorer, selecione o arquivo capabilities.json.
 
@@ -308,6 +313,7 @@ As seguintes estruturas são permitidas dentro do capabilities.json:
 2. dataViewMappings — Mapeia os dados que são vinculados aos papéis definidos em dataRoles para o gráfico e descreve como os dados serão estruturados.
 3. object — Define as opções de personalização, como cores, tamanhos, rótulos, entre outros. Essas opções aparecem no painel de formatação do Power BI e permitem que o usuário final personalize a aparência e comportamento do visual.
 
+---
 ### Testando o visual criado
 Após fazer todas as alterações e salvar os arquivos do projeto podemos então seguir para o processo de teste do visual customizado no Power BI.
 
@@ -330,5 +336,6 @@ Pronto, agora o código foi compilado e o comando inicia um servidor local na su
 ![imagem 21](/assets/images/18-10-2024/21.webp)
 ![imagem 22](/assets/images/18-10-2024/lollipop-chart-2.gif)
 
+---
 # Conclusão
 É isso! Espero que este guia tenha sido útil. Se você tiver alguma dúvida ou precisar de mais esclarecimentos, sinta-se à vontade para entrar em contato comigo no [🔗LinkedIn](https://www.linkedin.com/in/lucas-barbosa-517259169). Ficarei feliz em ajudar ou aprimorar qualquer parte do guia para uma melhor compreensão e contribuir com a comunidade.
