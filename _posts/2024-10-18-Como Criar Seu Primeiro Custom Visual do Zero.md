@@ -4,7 +4,6 @@ description: Neste guia, mostrarei como começar do zero no desenvolvimento de c
 date: 2024-10-18
 categories: [Power BI, Custom Visual]
 tags: [power bi, custom visual, development, chart]     # TAG names should always be lowercase
-comments: true
 ---
 
 Se você já domina o Power BI e está buscando dar o próximo passo, criar seus próprios custom visuals pode ser a chave para levar suas análises a um novo patamar. Custom visuals permitem que você personalize ainda mais suas visualizações, criando gráficos e componentes que atendam a alguma necessidade específica sua e oferecendo maior flexibilidade na apresentação dos dados.
