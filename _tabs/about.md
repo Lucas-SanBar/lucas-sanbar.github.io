@@ -22,5 +22,3 @@ Com uma sólida base técnica, proveniente da minha formação em Ciência da Co
 
 <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="lucas-barbosa-517259169" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/lucas-barbosa-517259169?trk=profile-badge"></a></div>
-              
-              
