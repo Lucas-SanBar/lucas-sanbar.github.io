@@ -12,7 +12,7 @@ O ChatGPT tem muitos usos para melhorar a produtividade e a eficiência de um pr
 
 Hoje, vou apresentar um guia prático sobre como enviar prompts do ChatGPT dentro de scripts do Power Query e salvar os resultados diretamente como novas colunas ou tabelas em seus dados. Essa integração oferece uma maneira de enriquecer suas análises, permitindo que você aproveite um pouco mais a inteligência artificial.
 
-<iframe src="https://capture.dropbox.com/embed/JHusE0SOwu8hrG8B?source=copy-embed" width="728" height="410" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://capture.dropbox.com/embed/JHusE0SOwu8hrG8B?source=copy-embed" width="560" height="315" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Neste guia, mostrarei uma possível forma de se utilizar a API da OpenAI para criar novas colunas e tabelas no Power BI. Apresentando os princípios básicos da integração, exemplos práticos e uma discussão sobre suas limitações.  
 
