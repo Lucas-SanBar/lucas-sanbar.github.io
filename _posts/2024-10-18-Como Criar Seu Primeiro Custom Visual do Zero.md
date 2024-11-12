@@ -13,7 +13,7 @@ Se você já domina o Power BI e está buscando dar o próximo passo, criar seus
 Neste guia, mostrarei como começar do zero no desenvolvimento de custom visuals, passando pela configuração do ambiente, ferramentas necessárias e criando um gráfico **simples** no estilo lollipop chart 🍭 utilizando a biblioteca [D3](https://d3js.org).
 
 <center>
-<iframe title="Lollipop Chart" width="100%" height="486" src="https://app.powerbi.com/view?r=eyJrIjoiYjJiYTQyMzItNDM4OS00NDdjLWI4M2EtMTcxMTEwYWM5OWFiIiwidCI6ImM1MjAzYWNlLTdhN2MtNGM4Ni1iMjRkLTNiYmUyOTQ5NTkzYSJ9" frameborder="0" allowFullScreen="true"></iframe>
+<iframe title="Lollipop Chart" width="100%" height="490" src="https://app.powerbi.com/view?r=eyJrIjoiYjJiYTQyMzItNDM4OS00NDdjLWI4M2EtMTcxMTEwYWM5OWFiIiwidCI6ImM1MjAzYWNlLTdhN2MtNGM4Ni1iMjRkLTNiYmUyOTQ5NTkzYSJ9" frameborder="0" allowFullScreen="true"></iframe>
 </center>
 ---
 ## Ferramentas necessárias
