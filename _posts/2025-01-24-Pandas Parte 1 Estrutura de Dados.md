@@ -88,6 +88,9 @@ A função `info()` do Pandas exibe informações detalhadas sobre um DataFrame.
 
 Ela exibe informações como o número de linhas, número de colunas, tipo de dados de cada coluna, quantidade de dados não nulos em cada coluna e uso de memória.
 
+>Neste exemplo, o DataFrame `df_data` contém 105018 linhas com seu index variando de 0 até 105017, um total de 30 colunas sendo 3 do tipo float64, 2 do tipo int64 e 25 do tipo object. O DataFrame tem em torno de 24.0mb de uso de memória.
+{: .prompt-tip }
+
 Outra função interessante para exibição de informações do DataFrame é a `columns()`, esta retorna os nomes das colunas de um DataFrame.
 
 ```python
@@ -210,10 +213,5 @@ _Series criada com os valores 1,10,100,1000 e com os index um, dez, cem, mil e c
 
 ---
 
-
-
-
-
-
-
-
+>Para download do notebook utilizado, acesse o [🔗Link](https://github.com/Lucas-SanBar/PyArq/blob/8bcfca4667204a313f3ab12550c4dad7f9284578/Desbravando%20Pandas/Parte%201%20-%20Estrutura%20de%20dados.ipynb)
+{: .prompt-warning }
