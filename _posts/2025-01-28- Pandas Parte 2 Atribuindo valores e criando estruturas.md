@@ -100,9 +100,9 @@ Casos comuns:
 
 Boas práticas
 
-1. **Garanta a Intenção**: Use .copy() explicitamente se não quiser modificar o DataFrame original.
-2. **Evite Substituições Desnecessárias**: Modifique valores in-place usando .loc ou .iloc quando possível.
-3. **Leia Warnings**: O SettingWithCopyWarning avisa quando o pandas detecta operações ambíguas entre views e cópias.
+1. **Garanta a Intenção**: Use `copy()` explicitamente se não quiser modificar o DataFrame original.
+2. **Evite Substituições Desnecessárias**: Modifique valores in-place usando .`loc` ou `iloc` quando possível.
+3. **Leia Warnings**: O `SettingWithCopyWarning` avisa quando o pandas detecta operações ambíguas entre views e cópias.
 
 | Situação                                          | Use View | Use Cópia |
 | ------------------------------------------------- | -------- | --------- |
