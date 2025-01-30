@@ -270,6 +270,20 @@ _Retorno referente ao índice 1 (Categoria) textual 'A' e 'B' e ao índice 2 (Pr
 
 ---
 
+## Resumo dos métodos
+
+|       Método       |                Descrição                 |
+| :----------------: | :--------------------------------------: |
+|       .index       |         Retornar o objeto índice         |
+| .set_index(coluna) |      Define uma coluna como índice       |
+|   .reset_index()   | Remove o índice e transforma-o em coluna |
+|    .loc[indice]    |    Acessa dados pelo valor do índice     |
+|   .iloc[posição]   |    Acessa dados pela posição numérica    |
+|   .sort_index()    |      Ordena o DataFrame pelo índice      |
+| .droplevel(nível)  | Remove um nível de um índice multi-nível |
+
+---
+
 >Para download do notebook utilizado, acesse o [🔗Link](https://github.com/Lucas-SanBar/PyArq/blob/a7003fc5268c42739287e548fb104e7af59702e2/Desbravando%20Pandas/Parte%203%20-%20%C3%8Dndices%20e%20sele%C3%A7%C3%A3o.ipynb)
 {: .prompt-warning }
 
