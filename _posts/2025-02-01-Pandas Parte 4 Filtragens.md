@@ -210,36 +210,36 @@ _Retorno da filtragem utilizando o método `query()` do DataFrame `df_data` util
 
 1. Filtragem direta:
 
-|                                 Exemplo                                  |                          Descrição                           |
-| :----------------------------------------------------------------------: | :----------------------------------------------------------: |
-|                      df_data[df_data['UF'] == 'SP']                      |                    Filtra onde UF é 'SP'                     |
-|              df_data[df_data['Nota do Consumidor'] >= 3.0]               |        Filtra onde Nota do Consumidor é maior que 3.0        |
-| df_data[(df_data['UF'] == 'SP') & (df_data['Nota do Consumidor'] > 3.0)] | Filtra onde UF é 'SP' e a Nota do Consumidor é maior que 3.0 |
-|       df_data[(df_data['UF'] == 'SP') \| (df_data['UF'] == 'RJ')]        |                Filtra onde UF é 'SP' ou 'RJ'                 |
+|                                  Exemplo                                   |                          Descrição                           |
+| :------------------------------------------------------------------------: | :----------------------------------------------------------: |
+|                      `df_data[df_data['UF'] == 'SP']`                      |                    Filtra onde UF é 'SP'                     |
+|              `df_data[df_data['Nota do Consumidor'] >= 3.0]`               |        Filtra onde Nota do Consumidor é maior que 3.0        |
+| `df_data[(df_data['UF'] == 'SP') & (df_data['Nota do Consumidor'] > 3.0)]` | Filtra onde UF é 'SP' e a Nota do Consumidor é maior que 3.0 |
+|       `df_data[(df_data['UF'] == 'SP') \| (df_data['UF'] == 'RJ')]`        |                Filtra onde UF é 'SP' ou 'RJ'                 |
 
-**Vantagem:** É mais fácil de entender e de usar.
-**Desvantagem:** Pode ser trabalhoso quando se tem muitas condições.
+* **Vantagem:** É mais fácil de entender e de usar.
+* **Desvantagem:** Pode ser trabalhoso quando se tem muitas condições.
 
-2. Filtragem com `query()`
+1. Filtragem com `query()`
 
-|                  Exemplo                   |               Descrição                |
-| :----------------------------------------: | :------------------------------------: |
-|        df_data.query("UF == 'SP'")         |         Filtra onde UF é 'SP'          |
-| df_data.query("Idade > 30 and UF == 'SP'") | Filtra onde UF é 'SP' e a Idade é > 30 |
-|    df_data.query("UF in ['SP', 'RJ']")     |     Filtra onde UF é 'SP' ou 'RJ'      |
+|                   Exemplo                    |               Descrição                |
+| :------------------------------------------: | :------------------------------------: |
+|        `df_data.query("UF == 'SP'")`         |         Filtra onde UF é 'SP'          |
+| `df_data.query("Idade > 30 and UF == 'SP'")` | Filtra onde UF é 'SP' e a Idade é > 30 |
+|    `df_data.query("UF in ['SP', 'RJ']")`     |     Filtra onde UF é 'SP' ou 'RJ'      |
 
-**Vantagem:** Mais fácil de ler.
-**Desvantagem:** Pode ser menos flexível em expressões complexas e não pode se utilizar caracteres especiais.
+* **Vantagem:** Mais fácil de ler.
+* **Desvantagem:** Pode ser menos flexível em expressões complexas e não pode se utilizar caracteres especiais.
 
 3. Filtragem com lista `isin()`
 
-|                Exemplo                |             Descrição             |
-| :-----------------------------------: | :-------------------------------: |
-| df[df['UF'].isin(['SP', 'RJ', 'MG'])] |   Filtra onde UF é SP, RJ ou MG   |
-|   df[~df['UF'].isin(['SP', 'RJ'])]    | Filtra onde UF **NÃO** é SP ou RJ |
+|                 Exemplo                 |             Descrição             |
+| :-------------------------------------: | :-------------------------------: |
+| `df[df['UF'].isin(['SP', 'RJ', 'MG'])]` |   Filtra onde UF é SP, RJ ou MG   |
+|   `df[~df['UF'].isin(['SP', 'RJ'])]`    | Filtra onde UF **NÃO** é SP ou RJ |
 
-Vantagem: Útil para verificar múltiplos valores rapidamente.
-Desvantagem: Não permite operadores lógicos diretos (exemplo: `>` ou `<`).
+* **Vantagem:** Útil para verificar múltiplos valores rapidamente.
+* **Desvantagem:** Não permite operadores lógicos diretos (exemplo: `>` ou `<`).
 
 ---
 
