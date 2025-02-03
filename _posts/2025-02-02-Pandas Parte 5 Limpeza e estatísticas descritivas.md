@@ -229,4 +229,96 @@ _DataFrame `df_exemplo` após a alteração feita_
 
 ---
 
+## Estatísticas descritivas
 
+O método `describe()` exibe várias estatísticas descritivas sobre um determinado DataFrame ou para uma Series.
+
+```python
+df_exemplo.describe()
+```
+
+![Bloco 18](/assets/images/02-02-2025/Bloco 18.png)
+_Estatísticas descritivas do DataFrame `df_exemplo`_
+
+Como o resultado do método `describe()` é outro DataFrame, podemos então fazer filtro nele:
+
+Por exemplo, se quisermos apenas a coluna 'Margem Contrato', podemos fazer filtragem direta
+
+```python
+df_exemplo['Margem Contrato'].describe()
+```
+
+![Bloco 19](/assets/images/02-02-2025/Bloco 19.png)
+_Estatísticas descritivas da coluna 'Margem Contrato'_
+
+Desta forma obteremos as mesmas descrições mas apenas da coluna interessada.
+
+Também podemos selecionar apenas as estatísticas desejadas utilizando o `.loc`
+
+```python
+df_exemplo.describe().loc[['min','mean','max']]
+```
+
+![Bloco 20](/assets/images/02-02-2025/Bloco 20.png)
+_Estatísticas descritivas `min`,`mean` e `max` do dataframe `df_exemplo`_
+
+Semelhante, também podemos selecionar apenas as estatísticas desejadas das colunas desejadas com `.loc`
+
+```python
+df_exemplo.describe().loc[['min','mean','max'],['Margem Contrato','Valor Contrato']]
+```
+
+![Bloco 21](/assets/images/02-02-2025/Bloco 21.png)
+_Estatísticas descritivas `min`,`mean` e `max` das colunas 'Margem Contrato' e 'Valor Contrato'_
+
+As estatísticas `std`,`mean`,`min`,`max` e todas as outras do método `describe()` podem ser computadas individualmentes.
+
+Se quisermos saber qual o preço mínimo de distribuição?
+
+```python
+df_exemplo['Preço Mínimo Distribuição'].min()
+```
+
+![Bloco 22](/assets/images/02-02-2025/Bloco 22.png)
+_Estatísticas descritivas `min` da coluna 'Preço Mínimo Distribuição'_
+
+Se quis quisermos saber qual o desvio padrão do valor do contrato?
+
+```python
+df_exemplo['Valor Contrato'].std()
+```
+
+![Bloco 23](/assets/images/02-02-2025/Bloco 23.png)
+_Estatísticas descritivas `std` da coluna 'Valor Contrato'_
+
+>Qualquer estatística do método `describe()` pode ser gerado individualmente como estes.
+{: .prompt-tip }
+
+Outro método útil para aferir estatísticas básicas do seu DataFrame é a contagem de frequência.
+
+Para isso o método `value_counts()` conta a frequência dos valores de uma dada variável da seguinte maneira:
+
+```python
+## Retorna em ordem decrescente uma Series com a quantidade de linhas (No nosso caso reclamações do Consumidor Gov) para cada UF
+df_data['UF'].value_counts() 
+```
+
+![Bloco 24](/assets/images/02-02-2025/Bloco 24.png)
+_Contagem da frequência de linhas da coluna 'UF' do DataFrame `df_data`_
+
+Caso seja necessário um DataFrame, podemos utilizar o método `to_frame()` para esse objetivo:
+
+```python
+## Convertendo a Series para DataFrame com o método to_frame()
+df_data['UF'].value_counts().to_frame()
+```
+
+![Bloco 25](/assets/images/02-02-2025/Bloco 25.png)
+_Transformando a Series contendo a contagem da frequência de linhas da coluna 'UF' do DataFrame `df_data` em um DataFrame_
+
+No nosso caso a UF com mais reclamações é **São Paulo** e a com menos reclamações é **Roraima**.
+
+---
+
+>Para download do notebook utilizado, acesse o [🔗Link](https://github.com/Lucas-SanBar/PyArq/blob/d36f0e601669e165cfa1ae2ecefe71fe60aa417c/Desbravando%20Pandas/Parte%205%20-%20Limpeza%20e%20estat%C3%ADsticas%20descritivas.ipynb)
+{: .prompt-warning }
