@@ -114,3 +114,119 @@ df_tratado['Análise da Recusa'].unique()
 ![Bloco 7](/assets/images/02-02-2025/Bloco 7.png)
 _Resultado após a troca dos valores nulos pela string **'Sem Valor'** da coluna **'Análise da Recusa'** do DataFrame `df_tratado`_
 
+### Conversão de tipos de colunas
+
+Muitas vezes os dados recebidos estarão fora de padrões pré-definidos, podendo conter erros de digitação e tipos de dados diferentes do usual e existirá a necessidade de tratá-los e padronizá-los para um tipo mais adequada.
+
+```python
+df_tratado[['Data Abertura','Data Resposta','Data Análise','Data Recusa']].info()
+```
+
+![Bloco 8](/assets/images/02-02-2025/Bloco 8.png)
+_Tipos das colunas 'Data Abertura','Data Resposta','Data Análise','Data Recusa' do DataFrame `df_tratado`_
+
+Note que no nosso DataFrame `df_tratado` todas as colunas de datas estão no tipo **object**. Existe um tipo de atributo no Pandas para data, este é o tipo **datetime** e podemos converter os tipos da seguinte forma:
+
+```python
+pd.to_datetime(df_tratado['Data Abertura'])
+```
+
+![Bloco 9](/assets/images/02-02-2025/Bloco 9.png)
+_Erro na função `to_datetime` devido ao padrão de data repassado_
+
+Este erro ocorre pois o formato de data do arquivo .csv esta diferente `DD/MM/YYYY` do padrão utilizado `YYYY-MM-DD`. Esta correção pode ser feito passando o parâmetro `format=%d/%m/%Y`:
+
+```python
+pd.to_datetime(df_tratado['Data Abertura'],format='%d/%m/%Y')
+```
+
+![Bloco 10](/assets/images/02-02-2025/Bloco 10.png)
+_Retorno da coluna 'Data Abertura' após a alteração do tipo_
+
+Vamos alterar todas as colunas de datas para o formato **datetime**:
+
+```python
+## Alterando o formato dos campo 'Data Abertura','Data Resposta','Data Análise' e 'Data Recusa' para datetime
+df_tratado['Data Abertura'] = pd.to_datetime(df_tratado['Data Abertura'],format='%d/%m/%Y') 
+df_tratado['Data Resposta'] = pd.to_datetime(df_tratado['Data Resposta'],format='%d/%m/%Y') 
+df_tratado['Data Análise'] = pd.to_datetime(df_tratado['Data Abertura'],format='%d/%m/%Y')
+df_tratado['Data Recusa'] = pd.to_datetime(df_tratado['Data Recusa'],format='%d/%m/%Y') 
+
+df_tratado.info()
+```
+
+![Bloco 11](/assets/images/02-02-2025/Bloco 11.png)
+_Informação das colunas após a alteração do tipo dos campos de data para **datetime** no DataFrame `df_tratado`_
+
+Repare também que a nossa coluna 'Nota do Consumidor' é do tipo **float64**.
+
+```python
+df_tratado['Nota do Consumidor'].unique()
+```
+
+![Bloco 12](/assets/images/02-02-2025/Bloco 12.png)
+_Campos únicos da coluna 'Nota do Consumidor'_
+
+Faz mais sentido alterarmos para o tipo **int32** já que a coluna em si varia apenas entre os valores 1,2,3,4 e 5. Para isto primeiro vamos tratar o valor `NaN` da coluna e em seguida converter para o tipo correto.
+
+```python
+df_tratado['Nota do Consumidor'] = df_tratado['Nota do Consumidor'].fillna(0)
+df_tratado['Nota do Consumidor'].unique()
+```
+
+![Bloco 13](/assets/images/02-02-2025/Bloco 13.png)
+_Campos únicos da coluna 'Nota do Consumidor' após alteração dos nulos para 0_
+
+Agora a alteração do tipo deste atributo pode ser feita utilizando a função de conversão `astype(type)` :
+
+```python
+df_tratado['Nota do Consumidor'] = df_tratado['Nota do Consumidor'].astype(int)
+df_tratado.info()
+```
+
+![Bloco 14](/assets/images/02-02-2025/Bloco 14.png)
+_Informação das colunas após a alteração do tipo do campo 'Nota do Consumidor' de **float64** para **int32** no DataFrame `df_tratado`_
+
+#### Como alterar varias colunas de uma vez?
+
+Para este objetivo, utilizaremos um DataFrame fictício apenas para exemplificar.
+
+```python
+df_exemplo = pd.read_excel('./Base de dados/Valores Contratos.xlsx', sheet_name='Plan1')
+df_exemplo.info()
+```
+
+![Bloco 15](/assets/images/02-02-2025/Bloco 15.png)
+_Informação das colunas no DataFrame `df_exemplo`_
+
+Os tipos de 'Valor Contrato', 'Margem Contrato', 'Preço Mínimo Distribuição' e 'Preço Máximo Distribuição' não estão representando números e sim strings.
+
+Para fazermos essa correção de forma mais eficaz, podemos utilizar a estrutura de repetição `for` (**Laços de repetição serão exemplificados no futuro**) juntamente com a função `to_numeric()`:
+
+```python
+for coluna in ['Valor Contrato', 'Margem Contrato', 'Preço Mínimo Distribuição','Preço Máximo Distribuição']:
+    df_exemplo[coluna] = pd.to_numeric(df_exemplo[coluna], errors='coerce')
+
+df_exemplo.info()
+```
+
+![Bloco 16](/assets/images/02-02-2025/Bloco 16.png)
+_Informação das colunas no DataFrame `df_exemplo` após alteração de todos valores que deveriam ser numericos de **object** para **float64**_
+
+A função `to_numeric()` possui o parâmetro `errors='ignore'|'raise'|'coerce'`. Este parâmetro indica como a conversão deve prosseguir caso encontre algum registro no qual a conversão se torna impossível para a função.
+* **raise:** A análise inválida gerará uma exceção;
+* **coerce:** A análise inválida será retornará `NaN` para o registro;
+* **ignore:** A análise inválida retornará o registro original;
+
+No nosso caso utilizamos o parâmetro `errors='coerce'` o que fez a conversão retornar o valor `NaN` para registros não tratados pela função:
+
+```python
+df_exemplo
+```
+
+![Bloco 17](/assets/images/02-02-2025/Bloco 17.png)
+_DataFrame `df_exemplo` após a alteração feita_
+
+---
+
+
