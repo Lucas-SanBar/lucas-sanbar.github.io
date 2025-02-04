@@ -1,6 +1,6 @@
 ---
 title: "Desbravando o Pandas - Parte 6 - Apply e Map"
-description: Um resumo sobre meamepando de funções no Pandas.
+description: Um resumo sobre mapeamento de funções no Pandas.
 date: 2025-02-04
 categories: [Python, Pandas]
 tags: [jupyter notebook, manipulação de dados, engenharia de dados]
