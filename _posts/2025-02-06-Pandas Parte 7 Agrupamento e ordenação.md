@@ -181,9 +181,11 @@ Podemos aplicar o método `sort_values()` por mais de uma coluna.
 
 Se quisermos ordenar de forma **Crescente** o valor do Salário e de forma **Descrescente** a idade. Podemos seguir o seguinte exemplo
 
+```python
 ## Ordenando o Salário de forma crescente (Menor → Maior)
 ## Ordenando a Idade de forma decrescente (Maior → Menor)
 df_rh.sort_values(by=['Salario','Idade'], ascending=[True,False])
+```
 
 ![Bloco 13](/assets/images/06-02-2025/Bloco 13.png)
 _DataFrame `df_rh` ordenado em ordem crescente **Menor Salário → Maior Salário** pelo Salário e em ordem decrescente **Maior Idade → Menor Idade**_
