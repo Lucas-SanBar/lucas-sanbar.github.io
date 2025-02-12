@@ -3,7 +3,7 @@ title: "Desbravando o Pandas - Parte 8 - Junção e concatenação"
 description: Nesta última parte explorando os conceitos iniciais da biblioteca Pandas vamos utilizar os métodos merge() e concat().
 date: 2025-02-11
 categories: [Python, Pandas]
-tags: [jupyter notebook, manipulação de dados, engenharia de dados]
+tags: [jupyter notebook, manipulação de dados, engenharia de dados, python, pandas]
 image: 
   path: /assets/images/11-02-2025/Capa-11-02-2025.png 
 ---

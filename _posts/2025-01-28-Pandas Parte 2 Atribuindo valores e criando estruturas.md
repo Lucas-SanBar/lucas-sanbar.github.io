@@ -3,7 +3,7 @@ title: "Desbravando o Pandas - Parte 2 - Atribuindo valores e criando atributos"
 description: A continuação da explorção da biblioteca Pandas, desta vez mostrando como atribuir valores e como criar atributos.
 date: 2025-01-28
 categories: [Python, Pandas]
-tags: [jupyter notebook, manipulação de dados, engenharia de dados]
+tags: [jupyter notebook, manipulação de dados, engenharia de dados, python, pandas]
 image: 
   path: /assets/images/28-01-2025/Capa-28-01-2025.png 
 ---

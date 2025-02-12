@@ -3,7 +3,7 @@ title: "Desbravando o Pandas - Parte 5 - Limpeza e estatísticas descritivas"
 description: Neste post, exploraremos as técnicas básicas de limpeza de dados, como tratamento de valores ausentes, correção de dados inconsistentes e a transformação de tipos de dados.
 date: 2025-02-02
 categories: [Python, Pandas]
-tags: [jupyter notebook, manipulação de dados, engenharia de dados]
+tags: [jupyter notebook, manipulação de dados, engenharia de dados, python, pandas]
 image: 
   path: /assets/images/02-02-2025/Capa-02-02-2025.png 
 ---

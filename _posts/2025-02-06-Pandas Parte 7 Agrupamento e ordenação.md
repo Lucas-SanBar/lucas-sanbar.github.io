@@ -3,7 +3,7 @@ title: "Desbravando o Pandas - Parte 7 - Agrupamento e ordenação"
 description: Como agrupar e/ou ordenar DataFrames baseando-se em atributos.
 date: 2025-02-06
 categories: [Python, Pandas]
-tags: [jupyter notebook, manipulação de dados, engenharia de dados]
+tags: [jupyter notebook, manipulação de dados, engenharia de dados, python, pandas]
 image: 
   path: /assets/images/06-02-2025/Capa-06-02-2025.png 
 ---

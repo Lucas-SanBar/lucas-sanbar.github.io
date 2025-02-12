@@ -3,7 +3,7 @@ title: "Desbravando o Pandas - Parte 1 - Estrutura de dados"
 description: Ao longo deste post, exploraremos os conceitos básicos para manipulação de dados começando com a importação de base de dados e a criação do primeiro Data Frame.
 date: 2025-01-26
 categories: [Python, Pandas]
-tags: [jupyter notebook, manipulação de dados, engenharia de dados]
+tags: [jupyter notebook, manipulação de dados, engenharia de dados, python, pandas]
 image: 
   path: /assets/images/25-01-2025/Capa-26-01-2025.png 
 ---

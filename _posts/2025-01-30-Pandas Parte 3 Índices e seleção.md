@@ -3,7 +3,7 @@ title: "Desbravando o Pandas - Parte 3 - Índices e seleção"
 description: Continuando com Pandas, desta vez mostrando o básico de Índices e como seleciona-los.
 date: 2025-01-30
 categories: [Python, Pandas]
-tags: [jupyter notebook, manipulação de dados, engenharia de dados]
+tags: [jupyter notebook, manipulação de dados, engenharia de dados, python, pandas]
 image: 
   path: /assets/images/30-01-2025/Capa-30-01-2025.png 
 ---

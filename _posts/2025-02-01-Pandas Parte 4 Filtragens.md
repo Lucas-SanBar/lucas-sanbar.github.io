@@ -3,7 +3,7 @@ title: "Desbravando o Pandas - Parte 4 - Filtragem"
 description: Neste post mostrarei o que talvez seja uma das partes mais utilizadas no tratamento de dados, a FILTRAGEM.
 date: 2025-02-01
 categories: [Python, Pandas]
-tags: [jupyter notebook, manipulação de dados, engenharia de dados]
+tags: [jupyter notebook, manipulação de dados, engenharia de dados, python, pandas]
 image: 
   path: /assets/images/01-02-2025/Capa-01-02-2025.png 
 ---
