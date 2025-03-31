@@ -334,7 +334,7 @@ Se na execução de todos os comandos nenhum erro foi retornado, o apache foi in
 ![Image 13](/assets/images/31-03-2025/Image 13.png)
 _Login Apache Airflow_
 
-### Criando o primeiro DAG
+## Criando o primeiro DAG
 
 Vamos criar o primeiro DAG para teste do airflow, para isso crie um arquivo dentro da pasta `airflow/dags` utilizando o seguinte comando
 
@@ -377,7 +377,16 @@ Abra a interface gráfica no navegador e faça o login utilizando as credênciai
 ![Image 14](/assets/images/31-03-2025/Image 13.png)
 _Login Apache Airflow_
 
-Encontre a DAG criada `my_first_dag` e inicie a sua execução, se nenhum erro ocorrer você verá algo parecido com o retorno a seguir
+Encontre a DAG criada `my_first_dag` e inicie a sua execução, se nenhum erro ocorrer você verá algo parecido com o retorno a seguir:
 
 ![Image 15](/assets/images/31-03-2025/Image 14.png)
 _DAG `my_first_dag` agendada sem nenhum erro_
+
+Parabéns! 🎉🎉🎉 Agora que seu primeiro DAG foi criado no Apache Airflow, você deu o primeiro passo para automatizar fluxos de dados e orquestrar tarefas de forma mais eficiente.
+
+Com essa estrutura inicial, você pode:
+1. Executar e monitorar tarefas diretamente pela interface web do Airflow.
+2. Adicionar dependências e agendamentos, tornando seu fluxo mais dinâmico.
+3. Integrar com bancos de dados, APIs e outras ferramentas para processar dados de forma escalável.
+
+Nosso próximo passo será entender mais sobre a estrutura do DAG, operadores e conexões para tornar seus pipelines mais robustos e automatizados.
